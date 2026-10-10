@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+//
+// Optional polkit rule shipped with Mobility Center (offered by install.sh,
+// default: not installed; removed again by uninstall.sh).
+//
+// Lets the user of the active local session change the battery charge limit
+// through PowerDevil's own helper without an administrator password. Only
+// this one action is affected; reading the limit never needed a password.
+// The widget itself ships no privileged code.
+//
+// Installed as /etc/polkit-1/rules.d/50-io.github.cir0cuit.mobilitycenter-chargelimit.rules
+
+polkit.addRule(function (action, subject) {
+    if (action.id == "org.kde.powerdevil.chargethresholdhelper.setthreshold"
+        && subject.local && subject.active) {
+        return polkit.Result.YES;
+    }
+});

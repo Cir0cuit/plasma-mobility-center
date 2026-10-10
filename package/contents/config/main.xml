@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- SPDX-License-Identifier: GPL-2.0-or-later -->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <!-- Tiles -->
+        <entry name="tileOrder" type="StringList">
+            <label>Tile ids in display order; merged at runtime with the known ids (new ids appended, unknown ids dropped)</label>
+            <default>brightness,volume,battery,wireless,keyboardBacklight,display,presentation</default>
+        </entry>
+        <entry name="hiddenTiles" type="StringList">
+            <label>Tile ids the user switched off</label>
+            <default></default>
+        </entry>
+        <entry name="inlineTiles" type="StringList">
+            <label>Tile ids whose details are shown inside the card (as far as there is room) instead of only behind the card's arrow</label>
+            <default></default>
+        </entry>
+        <entry name="minCardWidth" type="Int">
+            <label>Minimum card width in grid units; limits how many columns the cards form</label>
+            <default>9</default>
+            <min>7</min>
+            <max>30</max>
+        </entry>
+        <entry name="debugLayout" type="Bool">
+            <label>Log every layout pass and what caused it (journalctl --user -u plasma-plasmashell)</label>
+            <default>false</default>
+        </entry>
+        <entry name="showUnavailable" type="Bool">
+            <label>Show dimmed cards for tiles whose hardware or service is missing, instead of hiding them</label>
+            <default>false</default>
+        </entry>
+        <entry name="unavailableTiles" type="StringList">
+            <label>Internal: tile ids that were unavailable last time, for greying them in the settings</label>
+            <default></default>
+        </entry>
+
+        <!-- Behaviour -->
+        <entry name="brightnessShowOsd" type="Bool">
+            <label>Show the brightness on-screen display when changing it from the widget</label>
+            <default>false</default>
+        </entry>
+        <entry name="volumeFeedback" type="Bool">
+            <label>Play the volume feedback sound (only when built with libcanberra; also respects the audio settings)</label>
+            <default>true</default>
+        </entry>
+        <entry name="nightLightEnableMode" type="String">
+            <label>When Night Light is disabled, the chip either enables it directly ("config") or opens its settings ("kcm")</label>
+            <default>config</default>
+        </entry>
+        <entry name="presentationInhibitsNightLight" type="Bool">
+            <label>Presentation mode also suspends Night Light</label>
+            <default>true</default>
+        </entry>
+
+        <!-- Airplane mode (internal, not shown in the settings) -->
+        <entry name="airplaneActive" type="Bool">
+            <label>Internal: our airplane mode is on</label>
+            <default>false</default>
+        </entry>
+        <entry name="airplaneRestoreWifi" type="Bool">
+            <label>Internal: Wi-Fi state before airplane mode</label>
+            <default>true</default>
+        </entry>
+        <entry name="airplaneRestoreWwan" type="Bool">
+            <label>Internal: mobile broadband state before airplane mode</label>
+            <default>true</default>
+        </entry>
+        <entry name="airplaneRestoreBtBlocked" type="Bool">
+            <label>Internal: Bluetooth rfkill block before airplane mode</label>
+            <default>false</default>
+        </entry>
+        <entry name="airplaneRestoreAdapters" type="StringList">
+            <label>Internal: Bluetooth adapter power before airplane mode, as address=1/0</label>
+            <default></default>
+        </entry>
+    </group>
+</kcfg>

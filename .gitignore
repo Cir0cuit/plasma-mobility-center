@@ -1,0 +1,13 @@
+# Build tree
+/build/
+/build-*/
+
+# Generated translations (compiled from po/*.po at build time)
+/package/contents/locale/
+*.mo
+*.pot
+
+# Editors
+*.user
+.vscode/
+.idea/

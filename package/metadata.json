@@ -1,0 +1,24 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Bartłomiej Smolnik",
+                "Task": "Widget, QML modules and packaging",
+                "Website": "https://github.com/Cir0cuit"
+            }
+        ],
+        "BugReportUrl": "https://github.com/Cir0cuit/plasma-mobility-center/issues",
+        "Category": "System Information",
+        "Copyright": "© 2026 Bartłomiej Smolnik",
+        "Description": "Brightness, volume, battery, wireless, display and presentation controls in one desktop widget",
+        "EnabledByDefault": true,
+        "Icon": "computer-laptop",
+        "Id": "io.github.cir0cuit.mobilitycenter",
+        "License": "GPL-2.0-or-later",
+        "Name": "Mobility Center",
+        "Version": "1.0",
+        "Website": "https://github.com/Cir0cuit/plasma-mobility-center"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
