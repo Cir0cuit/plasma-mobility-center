@@ -175,9 +175,8 @@ It has been built, installed and used on four distributions:
   one with by far the most hours on it: the widget has lived on a real
   desktop there, was resized and reconfigured many times, and its tiles
   showed the machine's real state.
-* **Debian** — with KDE Plasma 6.
-* **Kubuntu** — with the Debian package names above.
-* **Arch** — with KDE Plasma 6.
+* **Debian**, **Kubuntu** and **Arch** — built with the commands above,
+  installed and run on KDE Plasma 6.
 
 Changing state from the widget has had far less exercise on real hardware
 than reading it; most of that is covered only by the tests below.
