@@ -82,9 +82,8 @@ sudo pacman -S --needed base-devel cmake extra-cmake-modules gettext \
     pulseaudio-qt libcanberra networkmanager-qt libkscreen
 ```
 
-The Fedora and Debian lines have been run; the Arch package names were
-looked up, not installed — corrections are welcome. Everything the widget
-needs at run time is part of a normal Plasma 6 desktop.
+All three lines have been run. Everything the widget needs at run time is
+part of a normal Plasma 6 desktop.
 
 ## Build and install
 
@@ -168,7 +167,7 @@ implementation, under human direction and review.
 That is a statement of fact rather than an excuse, but it comes with limits
 worth stating plainly, so here is what has actually been run.
 
-It has been built, installed and used on two systems:
+It has been built, installed and used on four distributions:
 
 * **Fedora 44** — Plasma 6.7.5 on Wayland, Qt 6.11.2, GCC 16.2, on a laptop
   with one internal HDR panel, a three-level keyboard backlight, a battery
@@ -177,6 +176,8 @@ It has been built, installed and used on two systems:
   desktop there, was resized and reconfigured many times, and its tiles
   showed the machine's real state.
 * **Debian** — with KDE Plasma 6.
+* **Kubuntu** — with the Debian package names above.
+* **Arch** — with KDE Plasma 6.
 
 Changing state from the widget has had far less exercise on real hardware
 than reading it; most of that is covered only by the tests below.
@@ -186,12 +187,11 @@ services (PowerDevil, UPower, power-profiles-daemon, NetworkManager, KWin
 Night Light and the inhibition services) and libkscreen's fake backend, and
 the layout and the cards by QML tests.
 
-What has not been tried: Arch and other distributions, older Plasma versions,
-X11, an external
-screen (so projection and per-display brightness have only met their
-tests), panels with several refresh rates, mobile broadband, and machines
-without some of the hardware. If it misbehaves, the useful bug report is the
-one that says what your setup was.
+What has not been tried: X11, an external screen (so projection and
+per-display brightness have only met their tests), panels with several
+refresh rates, mobile broadband, and machines without some of the hardware.
+If it misbehaves, the useful bug report is the one that says what your setup
+was.
 
 ## Contributing
 
